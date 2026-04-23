@@ -10,7 +10,10 @@ interface Props {
 
 export default function GameCard({ appid, name, imageUrl }: Props) {
   const [imgError, setImgError] = useState(false);
-  const src = imageUrl ?? `https://cdn.akamai.steamstatic.com/steam/apps/${appid}/header.jpg`;
+  const src =
+    imageUrl ??
+    `https://cdn.akamai.steamstatic.com/steam/apps/${appid}/header.jpg`;
+  console.log(src);
 
   return (
     <div
@@ -39,7 +42,13 @@ export default function GameCard({ appid, name, imageUrl }: Props) {
           >
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
               <rect width="24" height="24" rx="2" fill="#1b2838" />
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#66c0f4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                stroke="#66c0f4"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
             <span style={{ color: "#4f6a84", fontSize: "10px" }}>No Image</span>
           </div>
@@ -77,7 +86,15 @@ export default function GameCard({ appid, name, imageUrl }: Props) {
           {name}
         </p>
         <div className="mt-1 flex items-center gap-1">
-          <span style={{ backgroundColor: "#4c6b22", color: "#a4d007", fontSize: "10px", padding: "1px 4px", borderRadius: "2px" }}>
+          <span
+            style={{
+              backgroundColor: "#4c6b22",
+              color: "#a4d007",
+              fontSize: "10px",
+              padding: "1px 4px",
+              borderRadius: "2px",
+            }}
+          >
             PLAY
           </span>
         </div>
